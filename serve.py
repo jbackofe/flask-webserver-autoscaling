@@ -11,7 +11,7 @@ def get_hostname():
 
 @app.route('/', methods=['POST'])
 def start_process():
-    subprocess.Popen(['python', 'stress_cpu.py'])
+    subprocess.Popen(['python3', 'stress_cpu.py'])
 
     return jsonify({"message": "started stress_cpu.py"}), 200
 
