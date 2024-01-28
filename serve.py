@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def get_hostname():
     hostname = socket.gethostname()
-    return jsonify(hostname=hostname)
+    return hostname
 
 @app.route('/', methods=['POST'])
 def start_process():
